@@ -1,0 +1,21 @@
+clc;
+close all;
+clear all;
+f1=50;
+f2=70;
+f3=90;
+fn=max(f1,f2);
+fs=2*fn;
+x=[ 0 : 0.0001 : 0.05 ];
+tn=[ 0 : 1/fs : 0.05 ];
+xt=5*cos(2*pi*f1*x)+5*cos(2*pi*f2*x);
+xn=5*cos(2*pi*f1*tn)+5*cos(2*pi*f2*tn);
+%%subplot(2,1,1);
+%%tn=[0:1/fs:0.05];
+plot(x,xt,'r',tn,xn,'x');
+
+%%subplot(2,1,2);
+%%plot(tn,xn,'x');
+%%tn=[0:1/fs:0.05];
+%%xn=5*cos(2*pi*f1*t)+5*cos(2*pi*f2*t);
+%%subplot(2,1,2);
